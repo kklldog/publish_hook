@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="test.bat" />
+    <None Remove="test.sh" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="test.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="test.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Agile.AServer" Version="0.0.2" />
+    <PackageReference Include="NLog" Version="4.6.6" />
+  </ItemGroup>
+
+</Project>
